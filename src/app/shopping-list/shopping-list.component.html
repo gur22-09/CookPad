@@ -1,13 +1,16 @@
 <div class="row">
     <div class="col-sm-10">
-        <app-shopping-edit (addIngredient)="onAddIngredient($event)"></app-shopping-edit>
+        <app-shopping-edit></app-shopping-edit>
         <hr>
-        <ul class="list-group">
+        <ul class="list-group" *ngIf="ingredients.length; else infoText">
             <a style="cursor: pointer;" class="list-group-item"
-             *ngFor="let ingredient of ingredients"
+             *ngFor="let ingredient of ingredients;"
             >
             {{ ingredient.name }}({{ ingredient.amount }})
             </a>
         </ul>
+        <ng-template #infoText>
+            <p>please select a recipie</p>
+        </ng-template>
     </div>
 </div>
