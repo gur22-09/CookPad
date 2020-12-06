@@ -6,3 +6,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+.row {
+   margin: 5px;
+   padding: 10px; 
+}

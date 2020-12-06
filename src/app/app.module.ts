@@ -10,7 +10,8 @@ import { RecepieDetailComponent } from './recepies/recepie-detail/recepie-detail
 import { RecepieItemComponent } from './recepies/recepie-list/recepie-item/recepie-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { DropdownDirective } from './directives/dropdown.directive'
+import { DropdownDirective } from './directives/dropdown.directive';
+import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { DropdownDirective } from './directives/dropdown.directive'
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
+    RecepieStartComponent,
   ],
   imports: [
     BrowserModule,

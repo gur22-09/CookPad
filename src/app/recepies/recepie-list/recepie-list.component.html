@@ -6,8 +6,9 @@
 <hr>
 <div class="row">
 <app-recepie-item 
- *ngFor="let recipieEl of recipies" 
+ *ngFor="let recipieEl of recipies; let id=index" 
  [recipie]="recipieEl"
+ [id]="id"
  >
 </app-recepie-item>
 </div>

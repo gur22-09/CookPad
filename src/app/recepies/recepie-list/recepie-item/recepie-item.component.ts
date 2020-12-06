@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { RecipieServices } from 'src/app/services/recipie.services';
 import { Recipie } from '../../../models/recepie.model';
 
@@ -10,14 +11,12 @@ import { Recipie } from '../../../models/recepie.model';
 export class RecepieItemComponent implements OnInit {
 
   @Input() recipie: Recipie;
+  @Input() id: number;
   constructor(
-    private recipieService : RecipieServices
+    private recipieService : RecipieServices,
+    private router: RouterModule
   ) { }
 
   ngOnInit(): void {
-  }
-  
-  onSelectRecepie(){
-    this.recipieService.recipieSelected.emit(this.recipie);
   }
 }

@@ -39,7 +39,9 @@ export class RecipieServices{
     getRecipies(){
      return  this.recipies.slice();
     }
-
+    getRecepie(id: number) {
+      return this.recipies[id];  
+    }
     addIngredientToShoppingList(ingredient : Ingredients[]) {
        this.shoppingService.addIngredients(ingredient);
     }

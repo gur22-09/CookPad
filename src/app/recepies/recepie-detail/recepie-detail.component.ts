@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { RecipieServices } from 'src/app/services/recipie.services';
 import { Recipie } from '../../models/recepie.model';
 
@@ -8,10 +9,16 @@ import { Recipie } from '../../models/recepie.model';
   styleUrls: ['./recepie-detail.component.css']
 })
 export class RecepieDetailComponent implements OnInit {
-  @Input('recepie') recepieToDisplay : Recipie;
+  recepieToDisplay : Recipie;
   constructor(
-    private recepieService : RecipieServices
-  ) { }
+    private recepieService : RecipieServices,
+    private route: ActivatedRoute
+  ) { 
+    this.route.params.subscribe((params: Params) => {
+      // plus sign is added to convert string to int
+      this.recepieToDisplay = this.recepieService.getRecepie(+params.id);
+    })
+  }
 
   ngOnInit(): void {
   }
