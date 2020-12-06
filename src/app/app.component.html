@@ -2,8 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recepies *ngIf="selectedLink === 'recipie'"></app-recepies>
-      <app-shopping-list *ngIf="selectedLink !== 'recipie'"></app-shopping-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

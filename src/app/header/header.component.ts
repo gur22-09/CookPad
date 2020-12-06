@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
 
 @Component({
@@ -8,13 +9,10 @@ import { Component, EventEmitter, Output } from "@angular/core";
 })
 
 export class HeaderComponent{
-  @Output() navLinkClick = new EventEmitter<string>();
   selectedLink: string;
-  constructor() {
+  constructor(private router: RouterModule ) {
 
   }
   onSelectLink(link: string) {
-    this.selectedLink = link;
-    this.navLinkClick.emit(link);
   }
 }

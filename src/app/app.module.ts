@@ -21,7 +21,7 @@ import { DropdownDirective } from './directives/dropdown.directive'
     RecepieItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
