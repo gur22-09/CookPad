@@ -10,13 +10,15 @@ import { Recipie } from '../../models/recepie.model';
 })
 export class RecepieDetailComponent implements OnInit {
   recepieToDisplay : Recipie;
+  id: string;
   constructor(
     private recepieService : RecipieServices,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { 
     this.route.params.subscribe((params: Params) => {
       // plus sign is added to convert string to int
-      this.recepieToDisplay = this.recepieService.getRecepie(+params.id);
+      this.id = params.id
+      this.recepieToDisplay = this.recepieService.getRecepie(+this.id);
     })
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { RecipieServices } from 'src/app/services/recipie.services';
 import { Recipie } from '../../models/recepie.model';
 
@@ -10,7 +11,8 @@ import { Recipie } from '../../models/recepie.model';
 export class RecepieListComponent implements OnInit {
   recipies : Recipie[];
   constructor(
-    private recipieService: RecipieServices
+    private recipieService: RecipieServices,
+    private route: RouterModule
   ) { }
 
   ngOnInit(){
