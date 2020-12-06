@@ -11,7 +11,8 @@ import { RecepieItemComponent } from './recepies/recepie-list/recepie-item/recep
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './directives/dropdown.directive';
-import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.component'
+import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.component';
+import { RecepieEditComponent } from './recepies/recepie-edit/recepie-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.co
     ShoppingEditComponent,
     DropdownDirective,
     RecepieStartComponent,
+    RecepieEditComponent,
   ],
   imports: [
     BrowserModule,
